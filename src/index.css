@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #F7F3EB;
+    --bg-beige: #E8DFD1;
+    --espresso: #39291F;
+    --ink: #25211D;
+    --champagne: #C6A77B;
+    --white: #FFFFFF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html[lang="ckb"],
+  html[lang="ar"] {
+    font-family: "Vazirmatn", system-ui, -apple-system, sans-serif;
+  }
+
+  html[lang="en"] {
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  .font-editorial {
+    font-family: "Cormorant Garamond", "Vazirmatn", Georgia, serif;
+  }
+
+  html[lang="ckb"] .font-editorial,
+  html[lang="ar"] .font-editorial {
+    font-family: "Vazirmatn", "Cormorant Garamond", sans-serif;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #F7F3EB;
+    color: #25211D;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
